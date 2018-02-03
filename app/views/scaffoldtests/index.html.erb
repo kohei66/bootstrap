@@ -1,0 +1,36 @@
+<div class="container">
+
+<p id="notice"><%= notice %></p>
+
+<h1>Scaffoldtests</h1>
+
+<table>
+  <div class="theme">
+    <thead>
+      <tr>
+        <th>Content</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+  </div>
+  <div class="contents">
+
+    <div class="blog-panel">
+    <tbody>
+      <% @scaffoldtests.each do |scaffoldtest| %>
+          <tr>
+            <td><%= scaffoldtest.content %></td>
+            <td><%= link_to 'Show', scaffoldtest, class:'btn btn-default' %></td>
+            <td><%= link_to 'Edit', edit_scaffoldtest_path(scaffoldtest), class:"btn btn-info"%></td>
+            <td><%= link_to 'Destroy', scaffoldtest, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-danger' %></td>
+          </tr>
+      <% end %>
+    </tbody>
+  </div>
+</table>
+</div>
+
+<br>
+
+<%= link_to 'New Scaffoldtest', new_scaffoldtest_path %>
+</div>

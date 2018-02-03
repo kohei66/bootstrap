@@ -1,0 +1,2 @@
+class Scaffoldtest < ApplicationRecord
+end
